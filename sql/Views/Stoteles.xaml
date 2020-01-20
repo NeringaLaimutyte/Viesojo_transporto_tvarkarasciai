@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sql.Views.Stoteles">
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout HeightRequest="100" >
+                        <Label Text="{Binding .}"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout >
+                            <Label Text="{Binding Primary}" VerticalOptions="FillAndExpand" HorizontalOptions="Center"/>
+                            <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="{Binding Secondary}" VerticalOptions="CenterAndExpand"/>
+                            </ScrollView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout HeightRequest="100" >
+                        <Label Text="{Binding .}"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+</ContentPage>

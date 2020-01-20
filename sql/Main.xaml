@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sql.Main"
+             Title="Transportas">
+    <Grid BackgroundColor="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="190"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+            <Image Aspect="AspectFit" Source="Autobusai.png" WidthRequest="62.7" HeightRequest="40"/>
+            <Button Text="Autobusai" FontSize="Micro" HeightRequest="35" Clicked="Button_Clicked" BackgroundColor="Red"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+            <Image Aspect="AspectFit" Source="Troleibusai.png" WidthRequest="47.94" HeightRequest="40"/>
+            <Button Text="Troleibusai" FontSize="Micro" HeightRequest="35" Clicked="Button_Clicked_1" BackgroundColor="Green"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+            <Image Aspect="AspectFit" Source="Marsrutiniai.png" WidthRequest="57.54" HeightRequest="40"/>
+            <Button Text="Maršrutiniai taksi" FontSize="Micro" HeightRequest="55" Clicked="Button_Clicked_2" BackgroundColor="Goldenrod"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+            <Image Aspect="AspectFit" Source="Tarpmiestiniai.png" WidthRequest="74.99" HeightRequest="40"/>
+            <Button Text="Tarpmiestiniai" FontSize="Micro" HeightRequest="55" Clicked="Button_Clicked_3" BackgroundColor="Blue"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

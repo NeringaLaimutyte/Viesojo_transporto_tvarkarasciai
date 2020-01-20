@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sql.Views.Laikai">
+    <StackLayout>
+        <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout HeightRequest="100" >
+                        <Label Text="{Binding Primary}"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Label Text="{Binding Secondary}"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout >
+                            <Label Text="{Binding Primary}" VerticalOptions="FillAndExpand" HorizontalOptions="Center"/>
+                            <ScrollView Orientation="Horizontal">
+                                <Label Text="" VerticalOptions="Center"/>
+                            </ScrollView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout HeightRequest="100" >
+                        <Label Text="{Binding .}"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+        <StackLayout>
+            <Button x:Name="button1" Clicked="Button_Clicked" HeightRequest="60" FontSize="Micro" VerticalOptions="StartAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
